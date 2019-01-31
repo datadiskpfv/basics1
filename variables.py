@@ -48,3 +48,18 @@ print("hello " * 5)
 today = "Friday"
 print("day" in today)               # returns boolean
 print("parrot" in today)            # returns boolean
+
+
+# for very long strings pycharm may flag this
+input_prompt1 = "this is a very long sentence to be used in a user prompt and will probably be flagged by Pycharm, so we can use two different method as below"
+
+# use a slash to split a line
+input_prompt2 = "this is a very long sentence to be used in a user prompt and" \
+                "will probably be flagged by Pycharm, so we can use two different method as below"
+
+# the preferred way is to use brackets
+input_prompt3 = ("this is a very long sentence to be used in a user prompt and"
+                 "will probably be flagged by Pycharm, so we can use two different method as below")
+
+
+
