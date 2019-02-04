@@ -61,5 +61,19 @@ input_prompt2 = "this is a very long sentence to be used in a user prompt and" \
 input_prompt3 = ("this is a very long sentence to be used in a user prompt and"
                  "will probably be flagged by Pycharm, so we can use two different method as below")
 
+a = b = c = d = 12
+print(c)
+print(b)
+
+e, f = 13, 14
+print(e)
+print(f)
+
+x = 99
+y = 100
+x, y = y, x     # switch values in x and y
+print("x is {}".format(x))
+print("y is {}".format(y))
+
 
 
