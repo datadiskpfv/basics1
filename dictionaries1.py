@@ -8,7 +8,7 @@ fruit = {"orange": "a sweet, orange, citrus fruit",
          "lemon": "a sour, yellow citrus fruit",
          "grape": "a small, sweet fruit growing in bunches",
          "lime": "a sour, green citrus fruit",
-         "smelly fruit": "horriable smelly fruit"}
+         "smelly fruit": "horrible smelly fruit"}
 
 # add to dictionary
 fruit["pear"] = "an odd shape apple"
