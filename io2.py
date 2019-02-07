@@ -2,6 +2,8 @@
 # Writing files
 ########################################
 
+# MODES = r = read, w = write, a = append, b = binary (plus others)
+
 cities = ["Milton Keynes", "London", "Liverpool", "Lincoln"]
 
 with open('cities.txt', 'w') as city_file:
