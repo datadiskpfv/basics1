@@ -1,9 +1,25 @@
 import tkinter
+import math
 
 
-def parabola(para_x):
-    para_y = para_x * para_x / 100
-    return para_y
+def parabola(page, size):
+    for para_x in range(size):
+        para_y = para_x * para_x / size
+        plot(page, para_x, para_y)
+        plot(page, -para_x, para_y)
+
+
+def circle(page, radius, g, h):
+    page.create_oval(g + radius, h + radius, g - radius, h - radius, outline="red", width=2)
+
+    # code below is same as above
+    # for x in range(g * 100, (g + radius) * 100):
+    #     x /= 100
+    #     y = h + (math.sqrt(radius ** 2 - ((x-g) ** 2)))
+    #     plot(page, x, y)
+    #     plot(page, x, 2 * h - y)
+    #     plot(page, 2 * g - x, y)
+    #     plot(page, 2 * g - x, 2 * h - y)
 
 
 def draw_axes(page):
@@ -17,7 +33,7 @@ def draw_axes(page):
 
 
 def plot(page, plot_x, plot_y):
-    page.create_line(plot_x, plot_y, plot_x + 1, plot_y + 1, fill="red")
+    page.create_line(plot_x, -plot_y, plot_x + 1, -plot_y + 1, fill="red")
 
 
 mainWindow = tkinter.Tk()
@@ -30,9 +46,18 @@ canvas.grid(row=0, column=0)
 
 draw_axes(canvas)
 
-for x in range(-100, 100):
-    y = parabola(x)
-    plot(canvas, x, -y)
+parabola(canvas, 100)
+parabola(canvas, 200)
+parabola(canvas, 300)
 
+circle(canvas, 100, 100, 100)
+circle(canvas, 100, 100, -100)
+circle(canvas, 100, -100, 100)
+circle(canvas, 100, -100, -100)
+circle(canvas, 10, 30, 30)
+circle(canvas, 10, 30, -30)
+circle(canvas, 10, -30, 30)
+circle(canvas, 10, -30, -30)
+circle(canvas, 30, 0, 0)
 
 mainWindow.mainloop()
