@@ -44,9 +44,14 @@ def deal_dealer():
 
 
 def deal_player():
+    # python creates a local variable if you change or assign a value
+    # if you dont use a global one, hence we use the global keyword
     global player_score
+    global player_ace
+
     card_value = deal_card(player_card_frame)[0]
     if card_value == 1 and not player_ace:
+        player_ace = True
         card_value = 11
     player_score += card_value
 
