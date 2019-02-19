@@ -16,6 +16,7 @@ def factorial(n):
         return n * factorial(n-1)
 
 
+# slower than method below
 def fib(n):
     """ f(n) * f(n - 1) * f(n - 2) """
     if n < 2:
@@ -24,6 +25,7 @@ def fib(n):
         return fib(n-1) + fib(n-2)
 
 
+# faster method than above
 def fibonacci(n):
     if n == 0:
         result = 0
@@ -39,12 +41,8 @@ def fibonacci(n):
 
     return result
 
-# for i in range(130):
-#     print(i, fact(i))
-
-# for i in range(130):
-#     print(i, factorial(i))
-
+for i in range(130):
+    print(i, fact(i), "\t", factorial(i))
 
 for i in range(36):
     print(i, fib(i), "\t", fibonacci(i))
