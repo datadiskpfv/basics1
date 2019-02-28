@@ -1,5 +1,6 @@
 import sys
 
+
 def factorial(n):
     # n! can also be defined as n * (n-1)!
     """ calculates n! recursively """
@@ -20,7 +21,11 @@ except (RecursionError, OverflowError):
     print("This program cannot calculate factorials that large")
 except (NameError, TypeError, ValueError):
     print("Please enter a number not a character")
+except Exception:
+    print("Base class for all exceptions, catch all but should use specific exception")
+else:
+    print("Program executed correctly, else wont be called if program terminates")
 finally:
-    print("This will always execute")
+    print("finally will always execute, good for tidying up!")
 
-print("Program terminating")
+print("Back to main program - Program terminating")
